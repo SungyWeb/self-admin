@@ -1,20 +1,12 @@
-import { Button } from 'antd'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.less';
+import Page from './Page'
 import reportWebVitals from './reportWebVitals';
 
-const App = () => {
-  return (
-    <div>
-      <Button type="primary">click</Button>
-      <h3>hello world</h3>
-    </div>
-  )
-}
 ReactDOM.render(
   // <React.StrictMode>
-    <App />,
+    <Page />,
   // </React.StrictMode>,
   document.getElementById('root')
 );
