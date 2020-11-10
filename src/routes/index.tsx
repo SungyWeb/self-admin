@@ -4,6 +4,7 @@ import AllComponents from '../components'
 import { checkLogin } from '../units'
 import { IFMenu, IFMenuBase } from './config'
 import RouteConfig from './config'
+import RouteWrapper from './RouteWrapper'
 export default function CRouter(props: { auth: any }) {
   const { auth } = props
   const getPermits = (): any[]|null => auth ? auth.permissions : null
@@ -23,6 +24,7 @@ export default function CRouter(props: { auth: any }) {
   }
   const createMenu = (m: IFMenu) => {
     const route = (r: IFMenuBase) => {
+      debugger
       const Component = r.component && AllComponents[r.component as keyof typeof AllComponents]
       return (
         <Route
